@@ -1,4 +1,4 @@
-import { Container } from "pixi.js";
+import { Container, Graphics } from "pixi.js";
 import { Platform } from "../app/Component/Platform";
 
 export class CommonConfig {
@@ -8,7 +8,7 @@ export class CommonConfig {
     private jnvXPosition : number = 0;
     private jnvContainerWidth : number = 0;
 
-    private containers : Platform[] = [];
+    private containers : any[]= [];
 
     static get the(): CommonConfig {
         if (!CommonConfig._the) {
@@ -22,7 +22,7 @@ export class CommonConfig {
         return this.containers;
     }
 
-    public setPlatformContainers(container : Platform) {
+    public setPlatformContainers(container : Platform | Graphics) {
         this.containers.push(container);
     }
 

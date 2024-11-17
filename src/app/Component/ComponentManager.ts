@@ -5,12 +5,15 @@ import { Game } from "../game";
 import { Page_03 } from "./Page_03";
 import { Page_00 } from "./Page_00";
 import { Page_02Component } from "./Page_02Component";
+import { Page_04 } from "./Page_04";
+import { Platform_Page3 } from "../Platform/Platform_Page3";
 
 export class ComponentManager extends Container {
     private page_00 !: Page_00;
     private page_01 !: Page_01;
    
     private page_03 !: Page_03;
+    private page_04 !: Page_04;
     private page_02 !: Page_02;
 
 
@@ -29,7 +32,12 @@ export class ComponentManager extends Container {
 
         // this.page_02 = new Page_02();
         // this.addChild(this.page_02);
-        this.page_03 = new Page_03();
-        this.addChild(this.page_03);
+        // this.page_03 = new Page_03();
+        // this.addChild(this.page_03);
+
+        // this.page_04 = new Page_04();
+        // this.addChild(this.page_04);
+
+        this.addChild(new Platform_Page3());
     }
 }
